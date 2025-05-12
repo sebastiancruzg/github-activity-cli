@@ -55,7 +55,7 @@ def parse_args() -> str:
     parser.add_argument('username', type=str, help="github username")
     return parser.parse_args().username
 
-async def main():
+async def fetch_and_print_user_events():
     username = parse_args()
     response = await fetch_user_name(username)
     print("Output:")
@@ -63,4 +63,4 @@ async def main():
         print(f"- {get_event_description(item)}")
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    asyncio.run(fetch_and_print_user_events())
