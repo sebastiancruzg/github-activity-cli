@@ -12,7 +12,7 @@ def get_event_description(item: dict) -> str:
         "CreateEvent":
             f"Created a {payload.get('ref_type')} in {repo.get('name')}",
         "DeleteEvent":
-            f"{payload.get('action','').capitalize()} a {payload.get('ref_type')} in {repo.get('name')}",
+            f"Deleted a {payload.get('ref_type')} in {repo.get('name')}",
         "ForkEvent":
             f"Forked {repo.get('name')}",
         "IssueCommentEvent":
