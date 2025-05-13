@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "github-user-activity-cli"
 description = "Simple project for educational purposes"
-version = "1.0.0"
+version = "1.0.1"
 dependencies=["aiohttp>=3.11.18"]
 authors=[{name = "elcbi",email = "sebastian.gcruz64@gmail.com"}]
 license="MIT"
