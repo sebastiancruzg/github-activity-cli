@@ -10,7 +10,7 @@ def get_event_description(item: dict) -> str:
         "CommitCommentEvent":
             f"{payload.get('action','').capitalize()} a commit comment in {repo.get('name')}",
         "CreateEvent":
-            f"{payload.get('action','').capitalize()} a {payload.get('ref_type')} in {repo.get('name')}",
+            f"Created a {payload.get('ref_type')} in {repo.get('name')}",
         "DeleteEvent":
             f"{payload.get('action','').capitalize()} a {payload.get('ref_type')} in {repo.get('name')}",
         "ForkEvent":
@@ -42,7 +42,6 @@ def get_event_description(item: dict) -> str:
         "default":
             "Unknown event"
     }
-
     return event_types[item["type"]]
 
 async def fetch_user_name(user_name: str) -> dict:
